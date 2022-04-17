@@ -55,7 +55,7 @@ function setup() {
 
 
 function draw() {
-  background(20);
+  background(15);
   rectMode(CENTER);
   
   // stroke(255);
