@@ -4,6 +4,7 @@ palette = [];
 
 let boxes = [];
 let co;
+let numb = [25, 50, 100, 200];
 
 let fibo = [55, 89, 144, 233]
 let w;
@@ -44,7 +45,7 @@ function setup() {
   w = random(fibo);
   limitH = random(fibo);
   co = random(0.1, 0.01);
-  for(let i = 0; i < random(25, 100) ; i++) {
+  for(let i = 0; i < random(numb) ; i++) {
     
     //fill(random(palette));
     noStroke();
@@ -96,6 +97,7 @@ function riparti() {
   boxes = [];
   setup();
 }
+
 
 //========================//
 //resume audio context upon user event
