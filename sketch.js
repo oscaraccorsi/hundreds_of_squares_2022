@@ -1,5 +1,5 @@
 let baseURLImage = 'https://oscaraccorsi.github.io/pictures/';
-let img;
+let img, logo;
 palette = [];
 
 let boxes = [];
@@ -19,6 +19,7 @@ function preload() {
   
   drone = new Tone.Player('assets/scanner.mp3').toDestination();
   img = loadImage(baseURLImage + 'riley57.jpeg');
+  logo = loadImage(baseURLImage + 'good one white.png');
 }
 
 function windowResized() {
@@ -28,6 +29,7 @@ function windowResized() {
 //-----------------------------------------------SETUP
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  xLogo = windowWidth-40;
   img.resize(100, 200);
   img.loadPixels();
 //-----------------------------suono  
@@ -62,7 +64,8 @@ function setup() {
 
 //------------------------------------------DRAW
 function draw() {
-  background(20);
+  background(15, 15, 15);
+  
   rectMode(CENTER);
   
   // stroke(255);
@@ -98,12 +101,12 @@ function riparti() {
   setup();
 }
 
-
-//========================//
-//resume audio context upon user event
-//new google autoplay policy: https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
-function touchStarted() {
-  if (getAudioContext().state !== 'running') {
-    getAudioContext().resume();
-  }
+function mousePressed() {
+  imageMode(CENTER);
+  logo.resize(40, 0);
+  image(logo, xLogo, windowHeight-25);
+  tint(200); 
+  save();
+  clear();
+  background(15, 15, 15);
 }
