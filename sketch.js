@@ -64,7 +64,7 @@ function setup() {
 
 //------------------------------------------DRAW
 function draw() {
-  background(15, 15, 15, 0);
+  background(15, 15, 15);
   
   rectMode(CENTER);
   
