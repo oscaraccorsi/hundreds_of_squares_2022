@@ -49,7 +49,7 @@ function setup() {
     let r = img.pixels[i]; 
     let g = img.pixels[i+1]; 
     let b = img.pixels[i+2]; 
-    let c = color(r, g, b, 150);
+    let c = color(r, g, b, 100);
     palette.push(c);    
   }
   sfondoCol = random(palette);
